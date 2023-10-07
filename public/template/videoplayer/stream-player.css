@@ -1,0 +1,158 @@
+.video-js {
+  font-size: 12px;
+  overflow: hidden;
+ /*.vjs-tech {
+    height: auto !important;
+    position: absolute !important;
+ }
+ */
+}
+.video-js .vjs-control-bar {
+  background: none;
+}
+.video-js .vjs-control-bar::before {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  height: 5rem;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.45);
+  background: linear-gradient(0deg, rgba(0, 0, 0, .85) 10%, rgba(0, 0, 0, 0) 100%);
+}
+.video-js .vjs-progress-control.vjs-control {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 1rem;
+  bottom: 90%;
+}
+.video-js .vjs-progress-control.vjs-control .vjs-play-progress::before {
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+.video-js .vjs-progress-control.vjs-control:hover .vjs-play-progress::before {
+  transform: scale(1);
+}
+.video-js .vjs-progress-control.vjs-control .vjs-slider {
+  margin: 0 1rem;
+}
+.video-js .vjs-load-progress, .video-js .vjs-load-progress div {
+  background-color: rgba(160, 160, 160, 0.5);
+}
+.video-js .vjs-slider {
+  background-color: rgba(60, 60, 60, 0.5);
+}
+.video-js .vjs-slider-bar {
+  background-color: #13a9fe;
+}
+.video-js .vjs-play-progress {
+  background-color: #13a9fe;
+  color: #13a9fe;
+}
+.video-js .vjs-custom-control-spacer {
+  display: flex;
+  flex: auto;
+}
+.video-js .vjs-playback-rate .vjs-menu .vjs-menu-content {
+  width: 125%;
+  font-size: 10px;
+}
+.video-js .vjs-volume-panel.vjs-control {
+  transition: 0.2s;
+}
+.video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-horizontal {
+  transition: 0.2s;
+}
+.video-js .vjs-poster {
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+.video-js.vjs-has-started .vjs-poster {
+  opacity: 0;
+}
+.vjs-mouse-display .vjs-time-tooltip {
+  color: #13a9fe;
+}
+.video-js .vjs-progress-control .vjs-play-progress .vjs-time-tooltip {
+  display: none;
+}
+.vjs-has-started .vjs-control-bar {
+  opacity: 1;
+  transition: 0.1s;
+}
+.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+  opacity: 0;
+  transition: 0.3s;
+}
+.video-js .vjs-control:focus:before, .video-js .vjs-control:hover:before, .video-js .vjs-control:focus {
+  text-shadow: none;
+}
+a {
+  color: #13a9fe;
+  text-decoration: none;
+}
+#description {
+  text-overflow: ellipsis;
+  word-break: break-word;
+  max-width: 100%;
+}
+#description img {
+  max-width: 100%;
+}
+.bottom-gradient {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 72px);
+}
+.blink {
+  text-decoration: blink;
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 0.6s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+}
+@-webkit-keyframes blinker {
+  from {
+    opacity: 1;
+ }
+  to {
+    opacity: 0;
+ }
+}
+.odysee-skin a {
+  color: #fa6165;
+}
+.odysee-skin .video-js.vjs-odysee .vjs-big-play-button {
+  background-color: #fa6165 !important;
+  border: none !important;
+  border-radius: 50% !important;
+  width: 5rem !important;
+  height: 5rem !important;
+  background-position: calc(50% + 0.1rem) center !important;
+  background-size: 2.5rem !important;
+  background-repeat: no-repeat !important;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3Cg stroke='white' stroke-width='2' fill='white' fill-rule='evenodd' stroke-linejoin='round'%3E %3Cpolygon points='5 21 5 3 21 12'/%3E %3C/g%3E %3C/svg%3E") !important;
+}
+.odysee-skin .video-js.vjs-odysee .vjs-big-play-button .vjs-icon-placeholder::before {
+  content: none !important;
+}
+.odysee-skin .video-js.vjs-odysee .vjs-slider-bar {
+  background-color: #fa6165;
+}
+.odysee-skin .video-js.vjs-odysee .vjs-play-progress {
+  background-color: #fa6165;
+  color: #fa6165;
+}
+.odysee-skin .vjs-mouse-display .vjs-time-tooltip {
+  color: #fa6165;
+}
